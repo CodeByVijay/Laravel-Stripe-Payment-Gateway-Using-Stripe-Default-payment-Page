@@ -29,6 +29,7 @@ class StripeController extends Controller
                     ],
                 ],
                 'mode' => 'payment',
+                'allow_promotion_codes' => true,
                 'success_url' => route('checkout.success') . '?payment_intent={CHECKOUT_SESSION_ID}',
                 'cancel_url' => route('checkout.cancel') . '?payment_intent={CHECKOUT_SESSION_ID}',
             ]);
